@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Periodic Table</title>
+    <link rel="stylesheet" href="periodichome.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>Interactive Periodic Table</h1>
+
+    <!-- Search Bar -->
+    <input type="text" id="searchInput" placeholder="Search element by name or symbol..." onkeyup="searchElement()">
+
+   <!-- Periodic Table Container -->
+<div id="periodicTable" class="grid-container">
+    <!-- Empty slots for table layout -->
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <!-- First row -->
+    <div class="element nonmetal" style="grid-column: 1;" onmouseover="showElementInfo(1)">H</div>
+    <div class="empty" style="grid-column: 2 / span 16;"></div>
+    <div class="element noble-gas" style="grid-column: 18;" onmouseover="showElementInfo(2)">He</div>
+
+    <!-- Second row -->
+    <div class="element metal" onmouseover="showElementInfo(3)">Li</div>
+    <div class="element metal" onmouseover="showElementInfo(4)">Be</div>
+    <div class="empty" style="grid-column: 3 / span 10;"></div>
+    <div class="element metalloid" onmouseover="showElementInfo(5)">B</div>
+    <div class="element nonmetal" onmouseover="showElementInfo(6)">C</div>
+    <div class="element nonmetal" onmouseover="showElementInfo(7)">N</div>
+    <div class="element nonmetal" onmouseover="showElementInfo(8)">O</div>
+    <div class="element nonmetal" onmouseover="showElementInfo(9)">F</div>
+    <div class="element noble-gas" onmouseover="showElementInfo(10)">Ne</div>
+
+    <!-- Third row -->
+    <div class="element metal" onmouseover="showElementInfo(11)">Na</div>
+    <div class="element metal" onmouseover="showElementInfo(12)">Mg</div>
+    <div class="empty" style="grid-column: 3 / span 10;"></div>
+    <div class="element metalloid" onmouseover="showElementInfo(13)">Al</div>
+    <div class="element metalloid" onmouseover="showElementInfo(14)">Si</div>
+    <div class="element nonmetal" onmouseover="showElementInfo(15)">P</div>
+    <div class="element nonmetal" onmouseover="showElementInfo(16)">S</div>
+    <div class="element nonmetal" onmouseover="showElementInfo(17)">Cl</div>
+    <div class="element noble-gas" onmouseover="showElementInfo(18)">Ar</div>
+
+    <!-- Fourth row -->
+    <div class="element metal" onmouseover="showElementInfo(19)">K</div>
+    <div class="element metal" onmouseover="showElementInfo(20)">Ca</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(21)">Sc</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(22)">Ti</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(23)">V</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(24)">Cr</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(25)">Mn</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(26)">Fe</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(27)">Co</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(28)">Ni</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(29)">Cu</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(30)">Zn</div>
+    <div class="element metalloid" onmouseover="showElementInfo(31)">Ga</div>
+    <div class="element metalloid" onmouseover="showElementInfo(32)">Ge</div>
+    <div class="element nonmetal" onmouseover="showElementInfo(33)">As</div>
+    <div class="element nonmetal" onmouseover="showElementInfo(34)">Se</div>
+    <div class="element nonmetal" onmouseover="showElementInfo(35)">Br</div>
+    <div class="element noble-gas" onmouseover="showElementInfo(36)">Kr</div>
+
+    <!-- Fifth row -->
+    <div class="element metal" onmouseover="showElementInfo(37)">Rb</div>
+    <div class="element metal" onmouseover="showElementInfo(38)">Sr</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(39)">Y</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(40)">Zr</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(41)">Nb</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(42)">Mo</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(43)">Tc</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(44)">Ru</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(45)">Rh</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(46)">Pd</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(47)">Ag</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(48)">Cd</div>
+    <div class="element metalloid" onmouseover="showElementInfo(49)">In</div>
+    <div class="element metalloid" onmouseover="showElementInfo(50)">Sn</div>
+    <div class="element nonmetal" onmouseover="showElementInfo(51)">Sb</div>
+    <div class="element nonmetal" onmouseover="showElementInfo(52)">Te</div>
+    <div class="element nonmetal" onmouseover="showElementInfo(53)">I</div>
+    <div class="element noble-gas" onmouseover="showElementInfo(54)">Xe</div>
+
+    <!-- Sixth row -->
+    <div class="element metal" onmouseover="showElementInfo(55)">Cs</div>
+    <div class="element metal" onmouseover="showElementInfo(56)">Ba</div>
+    <div class="empty" style="grid-column: 3 / span 10;"></div>
+    <div class="element transition-metal" onmouseover="showElementInfo(57)">La</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(58)">Ce</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(59)">Pr</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(60)">Nd</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(61)">Pm</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(62)">Sm</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(63)">Eu</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(64)">Gd</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(65)">Tb</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(66)">Dy</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(67)">Ho</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(68)">Er</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(69)">Tm</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(70)">Yb</div>
+    <div class="element nonmetal" onmouseover="showElementInfo(71)">Lu</div>
+
+    <div class="empty" style="grid-column: 18;"></div>
+
+    <!-- Seventh row -->
+    <div class="element metal" onmouseover="showElementInfo(72)">Fr</div>
+    <div class="element metal" onmouseover="showElementInfo(73)">Ra</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(74)">Ac</div>
+    <div class="empty" style="grid-column: 3 / span 10;"></div>
+    <div class="element transition-metal" onmouseover="showElementInfo(75)">Th</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(76)">Pa</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(77)">U</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(78)">Np</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(79)">Pu</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(80)">Am</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(81)">Cm</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(82)">Bk</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(83)">Cf</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(84)">Es</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(85)">Fm</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(86)">Md</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(87)">No</div>
+    <div class="element transition-metal" onmouseover="showElementInfo(88)">Lr</div>
+    <div class="empty" style="grid-column: 18;"></div>
+</div>
+
+<!-- Lanthanides -->
+<div class="lanthanides">
+    <div class="element" onmouseover="showElementInfo(57)">La</div>
+    <div class="element" onmouseover="showElementInfo(58)">Ce</div>
+    <div class="element" onmouseover="showElementInfo(59)">Pr</div>
+    <div class="element" onmouseover="showElementInfo(60)">Nd</div>
+    <div class="element" onmouseover="showElementInfo(61)">Pm</div>
+    <div class="element" onmouseover="showElementInfo(62)">Sm</div>
+    <div class="element" onmouseover="showElementInfo(63)">Eu</div>
+    <div class="element" onmouseover="showElementInfo(64)">Gd</div>
+    <div class="element" onmouseover="showElementInfo(65)">Tb</div>
+    <div class="element" onmouseover="showElementInfo(66)">Dy</div>
+    <div class="element" onmouseover="showElementInfo(67)">Ho</div>
+    <div class="element" onmouseover="showElementInfo(68)">Er</div>
+    <div class="element" onmouseover="showElementInfo(69)">Tm</div>
+    <div class="element" onmouseover="showElementInfo(70)">Yb</div>
+    <div class="element" onmouseover="showElementInfo(71)">Lu</div>
+</div>
+
+<!-- Actinides -->
+<div class="actinides">
+    <div class="element" onmouseover="showElementInfo(89)">Ac</div>
+    <div class="element" onmouseover="showElementInfo(90)">Th</div>
+    <div class="element" onmouseover="showElementInfo(91)">Pa</div>
+    <div class="element" onmouseover="showElementInfo(92)">U</div>
+    <div class="element" onmouseover="showElementInfo(93)">Np</div>
+    <div class="element" onmouseover="showElementInfo(94)">Pu</div>
+    <div class="element" onmouseover="showElementInfo(95)">Am</div>
+    <div class="element" onmouseover="showElementInfo(96)">Cm</div>
+    <div class="element" onmouseover="showElementInfo(97)">Bk</div>
+    <div class="element" onmouseover="showElementInfo(98)">Cf</div>
+    <div class="element" onmouseover="showElementInfo(99)">Es</div>
+    <div class="element" onmouseover="showElementInfo(100)">Fm</div>
+    <div class="element" onmouseover="showElementInfo(101)">Md</div>
+    <div class="element" onmouseover="showElementInfo(102)">No</div>
+    <div class="element" onmouseover="showElementInfo(103)">Lr</div>
+</div>
+
+    <!-- Element Info Popup -->
+    <div id="elementInfo" class="element-info">
+        <span id="closeBtn" onclick="closeInfo()">×</span>
+        <h2 id="elementName"></h2>
+        <p><strong>Symbol:</strong> <span id="elementSymbol"></span></p>
+        <p><strong>Atomic Number:</strong> <span id="atomicNumber"></span></p>
+        <p><strong>Atomic Mass:</strong> <span id="atomicMass"></span></p>
+        <p><strong>Category:</strong> <span id="category"></span></p>
+    </div>
+
+    <script src="periodichome.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    gap: 5px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.element {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.element:hover {
+    background-color: #e7e7e7;
+}
+
+.empty {
+    background-color: transparent;
+}
+
+.nonmetal {
+    background-color: #ffcccb; /* Light red for nonmetals */
+}
+
+.metal {
+    background-color: #add8e6; /* Light blue for metals */
+}
+
+.metalloid {
+    background-color: #ffffe0; /* Light yellow for metalloids */
+}
+
+.noble-gas {
+    background-color: #e0ffff; /* Light cyan for noble gases */
+}
+
+.element-info {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+.element-info h2 {
+    margin: 0;
+}
+
+#closeBtn {
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+    border: none;
+    background: none;
+}
+/* Add this to your existing CSS */
+
+.element {
+    cursor: pointer; /* Change cursor to indicate hover */
+}
+
+.element-info {
+    display: none; /* Hide by default */
+    position: absolute;
+    background-color: white; /* Change as needed */
+    border: 1px solid #ccc; /* Change as needed */
+    padding: 10px;
+    z-index: 100; /* Ensure it appears above other elements */
+    transition: display 0.3s; /* Smooth transition */
+}
+
+.element:hover + .element-info {
+    display: block; /* Show on hover */
+}
+.lanthanides, .actinides {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.element {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 40px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.element:hover {
+    background-color: #e0e0e0;
+}
