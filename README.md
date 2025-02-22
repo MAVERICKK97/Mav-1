@@ -1,2 +1,2 @@
 # Mav-1
-This is a Demo file
+This is Mini Project
